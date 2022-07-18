@@ -1,5 +1,6 @@
 
 
+
 public class StepTracker {
     MonthData[] monthToData;
     int goal = 10000;
@@ -15,8 +16,15 @@ public class StepTracker {
         int[] days = new int[30];
     }
     public void steps(int monthNumber, int dayNumber, int steps) {
-        monthToData[monthNumber].days[dayNumber] += steps;
+        if (((monthNumber >= 0) && (monthNumber <=11)) && ((dayNumber >= 0) && (dayNumber <= 29)))
+        {
+            monthToData[monthNumber].days[dayNumber] += steps;
+        }
+        else {
+            System.out.println("Данные не были внесены. Вы ввели неверный номер месяца или дня. Введите номер месяца от 0 до 11 и номер дня от 0 до 29.");
+        }
     }
+
     public void stepsStat(int monthNumber) {
         int stepsAmount = 0;
         System.out.println("Ваша статистика за " + monthNumber + "-й месяц:");
@@ -41,6 +49,7 @@ public class StepTracker {
         System.out.println("Пройденная дистанция в километрах: " + Converter.stepsConverter(stepsAmount));
         System.out.println("Сожжено калорий: " + Converter.caloriesConverter(stepsAmount));
     }
+
     public int seriesStat (int monthNumber) {
         int maxSeries = 0;
         int daysCounter = 0;
@@ -56,6 +65,7 @@ public class StepTracker {
         }
         return maxSeries;
     }
+
     public int goal(int newGoal) {
         if (newGoal > 0) {
             goal = newGoal;
