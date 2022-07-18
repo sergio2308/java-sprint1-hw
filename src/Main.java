@@ -36,6 +36,7 @@ public class Main {
         }
         System.out.println("Программа остановлена");
     }
+
     private static void printMenu() {
         System.out.println("Какое действие вы хотите выполнить?");
         System.out.println("1 - Ввести количество шагов");

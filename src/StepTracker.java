@@ -16,7 +16,7 @@ public class StepTracker {
         int[] days = new int[30];
     }
     public void steps(int monthNumber, int dayNumber, int steps) {
-        if (((monthNumber >= 0) && (monthNumber <=11)) && ((dayNumber >= 0) && (dayNumber <= 29)))
+        if (((monthNumber >= 0) && (monthNumber <=11)) && ((dayNumber >= 0) && (dayNumber <= 29)))//диапазон номера месяца проверяю от 0 до 29 т.к. в ТЗ указано, что в месяце 30 дней
         {
             monthToData[monthNumber].days[dayNumber] += steps;
         }
