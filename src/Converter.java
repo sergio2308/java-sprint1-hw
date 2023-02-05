@@ -1,4 +1,4 @@
-public class Converter {
+public class Converter { 
 
     private static double stepLenght = 0.00075;
     private static int caloriesPerStep = 50;
