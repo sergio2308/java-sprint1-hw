@@ -26,7 +26,7 @@ public class StepTracker {
     }
 
     public void stepsStat(int monthNumber) {
-        int stepsAmount = 0;
+        int stepsAmount = 0; 
         System.out.println("Ваша статистика за " + monthNumber + "-й месяц:");
         for (int i = 0; i < ((monthToData[monthNumber].days.length) - 1); i++) {
             System.out.print((i + 1) + " день: " + monthToData[monthNumber].days[i] + ", ");
