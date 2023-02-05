@@ -32,7 +32,7 @@ public class StepTracker {
             System.out.print((i + 1) + " день: " + monthToData[monthNumber].days[i] + ", ");
         }
         System.out.print("30 день: " + monthToData[monthNumber].days[29]);
-        for (int i = 0; i < monthToData[monthNumber].days.length; i++) {
+        for (int i = 0; i < monthToData[monthNumber].days.length; i++) { 
             stepsAmount = stepsAmount + monthToData[monthNumber].days[i];
         }
         System.out.println();
